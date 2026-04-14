@@ -1,8 +1,16 @@
 # 14. API Spec — 인터페이스 명세서
 
-> **스택**: AWS Chalice (Python) · Vue3 (TypeScript) · EMQX MQTT 브로커 · Socket.IO  
-> **인증**: JWT RS256 — `Authorization: Bearer <access_token>`  
-> **공통 응답 봉투(Envelope)**: 모든 REST 응답은 `{ success, data, meta }` 구조를 따릅니다.
+> **스택**: AWS Chalice (Python) · Vue3 (TypeScript)  
+> **인증**: JWT HS256 — `Authorization: Bearer <access_token>`  
+> **공통 응답 봉투(Envelope)**: 모든 REST 응답은 `{ success, data, meta }` 구조를 따릅니다.  
+>
+> **구현 상태 표기**: ✅ 구현됨 | ⚠️ 설계만 존재 (미구현)  
+> 실제 구현 현황의 정확한 내용은 [18_implementation_status.md](18_implementation_status.md) 문서를 우선 참조하세요.
+
+---
+
+> ### 프로덕션 BaseURL
+> `https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api`
 
 ---
 
@@ -88,10 +96,10 @@
 
 | 방식 | 설명 |
 |---|---|
-| 알고리즘 | RS256 (비대칭 키 서명) |
+| 알고리즘 | **HS256** (단일 시크릿 키) — 설계의 RS256에서 변경 |
 | Access Token | 만료: 1시간, `Authorization: Bearer <token>` 헤더로 전달 |
-| Refresh Token | 만료: 30일, `HttpOnly Secure SameSite=Strict` 쿠키로 전달 |
-| 토큰 갱신 | Access Token 만료 시 프론트엔드 인터셉터가 `POST /auth/refresh` 자동 호출 |
+| Refresh Token | ⚠️ 미구현 (쿠키 방식 설계되었으나 실제 사용 안 함) |
+| 토큰 갱신 | ⚠️ `POST /auth/refresh` 미구현 — 만료 시 재로그인 필요 |
 
 **JWT Payload 구조**
 ```json
@@ -207,9 +215,9 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `POST /auth/login`
+### `POST /auth/login` ✅
 
-> 이메일·비밀번호로 로그인하여 Access Token과 Refresh Token을 발급합니다.  
+> 이메일·비밀번호로 로그인하여 Access Token을 발급합니다.  
 > **인증 불필요** (Public)
 
 **Request Body**
@@ -255,7 +263,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `POST /auth/refresh`
+### `POST /auth/refresh` ⚠️ 미구현
 
 > Refresh Token 쿠키를 검증하여 새 Access Token을 발급합니다.  
 > **인증 불필요** (쿠키로 인증)
@@ -284,7 +292,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `GET /auth/me`
+### `GET /auth/me` ✅
 
 > 현재 Access Token의 사용자 정보를 반환합니다.  
 > 페이지 새로고침 후 `currentUser` 복원에 사용합니다.  
@@ -307,7 +315,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `POST /auth/logout`
+### `POST /auth/logout` ⚠️ 미구현
 
 > Refresh Token 쿠키를 무효화합니다. (서버 측 블랙리스트 + 쿠키 만료 설정)  
 > **인증 필요** (`Bearer`)
@@ -323,7 +331,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `GET /vehicles`
+### `GET /vehicles` ✅
 
 > 차량 목록 조회. Soft Delete된 차량은 기본 제외됩니다.
 
@@ -377,7 +385,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `POST /vehicles`
+### `POST /vehicles` ⚠️ 미구현
 
 > 신규 차량 등록.  
 > **권한**: `ADMIN`, `MANAGER`
@@ -426,7 +434,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `GET /vehicles/{vehicle_id}`
+### `GET /vehicles/{vehicle_id}` ✅
 
 > 차량 상세 조회. 최신 센서 데이터 및 진행 중인 운행 정보 포함.
 
@@ -482,7 +490,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `PUT /vehicles/{vehicle_id}`
+### `PUT /vehicles/{vehicle_id}` ⚠️ 미구현
 
 > 차량 정보 수정.  
 > **권한**: `ADMIN`, `MANAGER`
@@ -515,6 +523,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ### `DELETE /vehicles/{vehicle_id}`
 
+> ⚠️ **미구현** — 설계만 존재  
 > 차량 Soft Delete.  
 > **권한**: `ADMIN`
 
@@ -528,7 +537,63 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
+### `PUT /vehicles/{vehicle_id}/telemetry` ✅
+
+> IoT 단말기 또는 시뮬레이터(`simulator.py`)가 실시간 센서 데이터를 전송합니다.  
+> 수신 즉시 SensorData 행을 삽입하고 Vehicle 상태(`RUNNING` / `IDLE`)를 갱신합니다.  
+> **권한**: `DRIVER`, `MANAGER`, `ADMIN`
+
+**Path Parameters**
+
+| 파라미터 | 타입 | 설명 |
+|---|---|---|
+| `vehicle_id` | `UUID` | 차량 ID |
+
+**Request Body**
+```json
+{
+  "latitude": 37.5012,
+  "longitude": 127.0396,
+  "speed_kmh": 42.5,
+  "battery_level_pct": 68.2,
+  "engine_temp_celsius": 72.3
+}
+```
+
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| `latitude` | `float` | 위도 |
+| `longitude` | `float` | 경도 |
+| `speed_kmh` | `float` | 속도 (km/h). 0 초과 시 → RUNNING, 0 이하 → IDLE |
+| `battery_level_pct` | `float` | 배터리 잔량 (%) |
+| `engine_temp_celsius` | `float` | 엔진 온도 (°C) |
+
+**Response `200 OK`**
+```json
+{
+  "success": true,
+  "data": {
+    "vehicle_id": "a1b2c3d4-...",
+    "status": "RUNNING",
+    "recorded_at": "2026-04-15T01:23:45.123456Z"
+  },
+  "meta": null
+}
+```
+
+**Error Cases**
+
+| HTTP | `error.code` | 상황 |
+|---|---|---|
+| 404 | `NOT_FOUND` | 차량 없음 |
+| 401 | `TOKEN_INVALID` | 인증 실패 |
+
+---
+
 ## 4. REST API — 센서 데이터
+
+> ⚠️ **이 섹션의 모든 엔드포인트는 미구현입니다.**  
+> 센서 데이터는 `PUT /vehicles/{id}/telemetry` 로 수신 후 DB에만 저장되며, 조회 API는 아직 없습니다.
 
 **Base Path**: `/vehicles/{vehicle_id}/sensors`  
 **인증 필요**: `Bearer`  
@@ -536,7 +601,7 @@ def decode_cursor(cursor: str) -> dict:
 
 ---
 
-### `GET /vehicles/{vehicle_id}/sensors`
+### `GET /vehicles/{vehicle_id}/sensors` ⚠️ 미구현
 
 > 특정 차량의 센서 데이터 이력 조회 (시계열, 최신순).  
 > 무한 스크롤 또는 그래프 차트 데이터 로드에 사용합니다.
@@ -649,9 +714,9 @@ def list_by_vehicle(
 
 ---
 
-### `GET /alerts`
+### `GET /alerts` ✅
 
-> 알림 목록 조회. 미확인 알림 우선, 최신순 정렬.
+> 알림 목록 조회. 최신순 정렬.
 
 **Query Parameters**
 
@@ -727,7 +792,50 @@ def list_alerts(self, cursor: str | None, limit: int) -> list[Alert]:
 
 ---
 
-### `GET /alerts/{alert_id}`
+### `POST /alerts` ✅
+
+> 시뮬레이터(`simulator.py`) 또는 이벤트 감지기가 알림을 직접 생성합니다.  
+> **권한**: `DRIVER`, `MANAGER`, `ADMIN`
+
+**Request Body**
+```json
+{
+  "vehicle_id": "a1b2c3d4-...",
+  "alert_type": "OVERSPEED",
+  "severity": "DANGER",
+  "title": "과속 감지 — 92km/h",
+  "description": "제한속도 초과 감지",
+  "speed_at_trigger": 92.3,
+  "battery_at_trigger": 65.0,
+  "location_lat": 37.5015,
+  "location_lng": 127.0401
+}
+```
+
+| 필드 | 타입 | 필수 | 설명 |
+|---|---|---|---|
+| `vehicle_id` | `UUID` | ✅ | 알림 대상 차량 ID |
+| `alert_type` | `string` | ✅ | `OVERSPEED`, `BATTERY_LOW`, `BATTERY_CRITICAL`, `GEOFENCE_EXIT`, `SUDDEN_ACCEL`, `SUDDEN_BRAKE`, `ACCIDENT_SUSPECTED`, `MAINTENANCE_DUE`, `COMMUNICATION_LOST` |
+| `severity` | `string` | ✅ | `DANGER`, `WARNING`, `INFO` |
+| `title` | `string` | ✅ | 알림 제목 |
+| `description` | `string` | — | 상세 설명 |
+| `speed_at_trigger` | `float` | — | 발생 시 속도 (km/h) |
+| `battery_at_trigger` | `float` | — | 발생 시 배터리 잔량 (%) |
+| `location_lat` | `float` | — | 발생 위치 위도 |
+| `location_lng` | `float` | — | 발생 위치 경도 |
+
+**Response `201 Created`**: 생성된 알림 상세 (목록 아이템과 동일 구조)
+
+**Error Cases**
+
+| HTTP | `error.code` | 상황 |
+|---|---|---|
+| 404 | `NOT_FOUND` | 차량 없음 |
+| 400 | `VALIDATION_ERROR` | 필수 필드 누락 또는 enum 값 오류 |
+
+---
+
+### `GET /alerts/{alert_id}` ⚠️ 미구현
 
 > 알림 단건 상세 조회.
 
@@ -735,7 +843,7 @@ def list_alerts(self, cursor: str | None, limit: int) -> list[Alert]:
 
 ---
 
-### `PATCH /alerts/{alert_id}/acknowledge`
+### `PATCH /alerts/{alert_id}/acknowledge` ✅
 
 > 알림 확인 처리. 처리한 관제사 정보와 시각이 기록됩니다.  
 > **권한**: `ADMIN`, `MANAGER`
@@ -798,10 +906,10 @@ def list_alerts(self, cursor: str | None, limit: int) -> list[Alert]:
 
 ---
 
-### `GET /trips`
+### `GET /trips` ✅
 
-> 전체 운행 기록 목록 (관리자 전용 집계 뷰).  
-> **권한**: `ADMIN`, `MANAGER`
+> 전체 운행 기록 목록.  
+> **권한**: `MANAGER`, `ADMIN`
 
 **Query Parameters**
 

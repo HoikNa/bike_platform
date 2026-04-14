@@ -1,11 +1,15 @@
 # 16. Frontend Architecture — Vue3 프론트엔드 아키텍처
 
-> **스택**: Vue 3.4 · TypeScript · Vite · Pinia · Vue Router 4 · Axios · Socket.IO · TailwindCSS v3  
+> **스택**: Vue 3.4 · TypeScript · Vite · Pinia · Vue Router 4 · Axios · Leaflet · TailwindCSS v3  
 > **원칙**: 단방향 데이터 흐름 — View → Store → Service → API
 
 > ⚠️ **[구현 현황 주의]** 이 문서는 **설계 목표** 기준입니다.  
-> 실제 구현 상태(사이드바→상단 헤더, 데모 시뮬레이션, WebSocket 미연결 등)는  
+> 실제 구현 상태(상단 헤더 레이아웃, HTTP 폴링 방식, Vercel 배포 등)는  
 > **[18_implementation_status.md](18_implementation_status.md)** 를 참고하세요.
+>
+> **v2.1 기준 실제 배포**: Vercel (`https://fms-frontend-peach.vercel.app`),  
+> 실시간 통신: WebSocket 대신 **HTTP 폴링** (`useRealtime` composable, 2.5초 간격),  
+> API 클라이언트: 개별 서비스 파일 + `services/api.ts` 통합 클라이언트 추가.
 
 ---
 
@@ -46,21 +50,25 @@
 │                                                            │
 │  Pinia Stores ◄──── Views / Components                     │
 │  ├── useAuthStore     (인증·사용자 정보)                    │
-│  ├── useFleetStore    (차량 목록·상세)                      │
+│  ├── useFleetStore    (차량 목록·실시간 위치·경로 이력)      │
 │  ├── useAlertStore    (알림 목록·상태)                      │
-│  ├── useRealtimeStore (WebSocket·실시간 위치)               │
-│  └── useUIStore       (Toast·Sidebar·Global Loading)       │
+│  ├── useRealtimeStore (폴링 연결 상태 플래그)               │
+│  └── useUIStore       (Toast·Global Loading)               │
 │              │                                             │
 │  Services ◄──┘                                             │
+│  ├── api.ts           (통합 API 클라이언트 ★)              │
 │  ├── authService      (Axios + /auth/*)                    │
 │  ├── vehicleService   (Axios + /vehicles/*)                │
 │  ├── alertService     (Axios + /alerts/*)                  │
-│  └── ...                                                   │
+│  └── tripService      (Axios + /trips/*)                   │
 │              │                                             │
-│  Axios Instance (인터셉터: 토큰 주입, 자동 갱신, 에러 파싱) │
+│  Composables                                               │
+│  └── useRealtime (HTTP 폴링 2.5초 — ★ WebSocket 대체)      │
+│              │                                             │
+│  Axios Instance (인터셉터: 토큰 주입, 에러 파싱)            │
 └──────────────┬─────────────────────────────────────────────┘
-               │ HTTPS / WebSocket
-         AWS API Gateway / Socket.IO
+               │ HTTPS (REST API 폴링)
+         AWS API Gateway (프로덕션) / localhost:8000 (로컬)
 ```
 
 ---
@@ -73,9 +81,8 @@ src/
 ├── App.vue                         # 루트 컴포넌트 (RouterView + ToastContainer)
 │
 ├── layouts/
-│   ├── AppLayout.vue               # 관제 대시보드 레이아웃 (Header + Sidebar + Main)
-│   ├── MobileLayout.vue            # 모바일 앱 레이아웃 (TopBar + Content + BottomNav)
-│   └── AuthLayout.vue              # 인증 페이지 레이아웃 (중앙 카드)
+│   └── AppLayout.vue               # ★ 상단 헤더 단일 레이아웃 (Sidebar 없음)
+│   # ⚠️ 미구현: MobileLayout.vue, AuthLayout.vue
 │
 ├── views/                          # 페이지 단위 컴포넌트 (라우터와 1:1 대응)
 │   ├── auth/
@@ -435,101 +442,55 @@ export const useAlertStore = defineStore("alert", () => {
 
 ### 4.4 useRealtimeStore
 
+> ✅ **현재 구현**: WebSocket 대신 **연결 상태 플래그**만 관리합니다.  
+> 실제 데이터 갱신은 `useRealtime` composable의 HTTP 폴링이 담당합니다.
+
 ```typescript
-// src/stores/realtime.ts
+// src/stores/realtime.ts (실제 구현)
 import { ref } from "vue"
 import { defineStore } from "pinia"
-import { io, Socket } from "socket.io-client"
-import { useAuthStore } from "./auth"
-import { useFleetStore } from "./fleet"
-import { useAlertStore } from "./alert"
-import { useUIStore } from "./ui"
 
 export const useRealtimeStore = defineStore("realtime", () => {
-  const socket         = ref<Socket | null>(null)
-  const isConnected    = ref(false)
-  const subscribedIds  = ref<Set<string>>(new Set())
+  const isConnected = ref(false)
 
-  function connect(vehicleIds: string[]): void {
-    const auth = useAuthStore()
-
-    // 중복 연결 방지 — 이미 연결되어 있으면 구독만 추가
-    if (socket.value?.connected) {
-      socket.value.emit("SUBSCRIBE", { vehicle_ids: vehicleIds })
-      vehicleIds.forEach(id => subscribedIds.value.add(id))
-      return
-    }
-
-    socket.value = io("/realtime", {
-      auth: { token: auth.accessToken },
-      transports: ["websocket"],
-      reconnectionAttempts: 5,
-      reconnectionDelay: 2000,
-    })
-
-    // ── 시스템 이벤트 ─────────────────────────────────────
-    socket.value.on("connect", () => {
-      isConnected.value = true
-      socket.value!.emit("SUBSCRIBE", { vehicle_ids: vehicleIds })
-      vehicleIds.forEach(id => subscribedIds.value.add(id))
-    })
-
-    socket.value.on("disconnect", () => {
-      isConnected.value = false
-    })
-
-    socket.value.on("error", (err: { code: string; message: string }) => {
-      if (err.code === "TOKEN_EXPIRED") disconnect()
-    })
-
-    // ── 도메인 이벤트 ─────────────────────────────────────
-    socket.value.on("VEHICLE_LOCATION_UPDATE", (payload) => {
-      useFleetStore().updateRealtimeLocation(payload.vehicle_id, payload)
-    })
-
-    socket.value.on("ALERT_TRIGGERED", (payload) => {
-      useAlertStore().prependAlert(payload)
-      useUIStore().addToast({
-        type: payload.severity === "DANGER" ? "error" : "warning",
-        message: payload.title,
-        duration: 7000,
-      })
-    })
-
-    socket.value.on("BATTERY_REPLACE_REQUIRED", (payload) => {
-      useUIStore().openBatteryModal(payload)
-    })
-
-    socket.value.on("VEHICLE_STATUS_CHANGED", (payload) => {
-      useFleetStore().fetchVehicles()  // 상태 변경 시 목록 갱신
-    })
+  function setConnected(value: boolean): void {
+    isConnected.value = value
   }
 
-  function disconnect(): void {
-    socket.value?.disconnect()
-    socket.value    = null
-    isConnected.value   = false
-    subscribedIds.value = new Set()
-  }
-
-  function subscribe(vehicleIds: string[]): void {
-    if (!socket.value?.connected) return
-    socket.value.emit("SUBSCRIBE", { vehicle_ids: vehicleIds })
-    vehicleIds.forEach(id => subscribedIds.value.add(id))
-  }
-
-  function unsubscribe(vehicleIds: string[]): void {
-    if (!socket.value?.connected) return
-    socket.value.emit("UNSUBSCRIBE", { vehicle_ids: vehicleIds })
-    vehicleIds.forEach(id => subscribedIds.value.delete(id))
-  }
-
-  return {
-    socket, isConnected, subscribedIds,
-    connect, disconnect, subscribe, unsubscribe,
-  }
+  return { isConnected, setConnected }
 })
 ```
+
+**폴링 방식 (`composables/useRealtime.ts`)**
+
+```typescript
+// 컴포넌트 mount 시 2.5초 간격으로 차량·알림 동시 갱신
+export function useRealtime(intervalMs = 2500) {
+  onMounted(() => {
+    realtimeStore.setConnected(true)
+    timer = setInterval(() => {
+      Promise.all([fleetStore.refreshVehicles(), alertStore.refreshAlerts()])
+    }, intervalMs)
+  })
+  onUnmounted(() => {
+    clearInterval(timer)
+    realtimeStore.setConnected(false)
+  })
+}
+```
+
+<details>
+<summary>⚠️ 설계 목표 (미구현 — Socket.IO WebSocket)</summary>
+
+WebSocket 방식의 설계 코드는 아래와 같습니다. 현재는 미구현입니다.
+
+```typescript
+// 설계 목표 (미구현)
+socket.value = io("/realtime", { auth: { token }, transports: ["websocket"] })
+socket.value.on("VEHICLE_LOCATION_UPDATE", (payload) => { ... })
+socket.value.on("ALERT_TRIGGERED", (payload) => { ... })
+```
+</details>
 
 ---
 
@@ -595,6 +556,24 @@ export const useUIStore = defineStore("ui", () => {
 ---
 
 ## 5. HTTP 서비스 레이어 (Axios)
+
+### 5.0 환경별 baseURL 분기
+
+| 환경 | `VITE_API_BASE_URL` | 실제 요청 대상 |
+|---|---|---|
+| 로컬 개발 | 미설정 | Vite proxy `/api → http://localhost:8000` |
+| 프로덕션 (Vercel) | `.env.production` 에 설정된 API Gateway URL | AWS API Gateway 직접 호출 |
+
+### 5.1 통합 API 클라이언트 (`services/api.ts`) ★
+
+```typescript
+// src/services/api.ts — 주요 API 함수 모음 (http.ts 기반)
+export async function fetchVehicles(pageSize = 100): Promise<Vehicle[]>
+export async function fetchVehicleDetail(id: string): Promise<Vehicle>
+export async function fetchAlerts(limit = 30): Promise<Alert[]>
+```
+
+### 5.2 Axios 인스턴스 (`services/http.ts`)
 
 ```typescript
 // src/services/http.ts
