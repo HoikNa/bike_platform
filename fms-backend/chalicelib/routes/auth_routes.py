@@ -1,5 +1,6 @@
 from chalice import Blueprint, Response
 from chalicelib.core.database import get_session
+from chalicelib.core.cors import cors_config
 from chalicelib.services.auth_service import AuthService
 from chalicelib.core.exceptions import APIException
 from pydantic import ValidationError
@@ -7,7 +8,7 @@ from chalicelib.schemas.auth import LoginRequest
 
 auth_bp = Blueprint(__name__)
 
-@auth_bp.route('/auth/login', methods=['POST'], cors=True)
+@auth_bp.route('/auth/login', methods=['POST'], cors=cors_config)
 def login():
     request = auth_bp.current_request
     try:
@@ -22,7 +23,7 @@ def login():
     except Exception as e:
         return Response(body={"success": False, "error": {"code": "INTERNAL_ERROR", "message": "Internal server error"}}, status_code=500)
 
-@auth_bp.route('/auth/me', methods=['GET'], cors=True)
+@auth_bp.route('/auth/me', methods=['GET'], cors=cors_config)
 def get_me():
     request = auth_bp.current_request
     from chalicelib.middlewares.auth import require_role

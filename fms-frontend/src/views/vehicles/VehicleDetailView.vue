@@ -232,14 +232,12 @@ import { computed, onMounted, onUnmounted, defineComponent, h } from "vue"
 import { useRoute } from "vue-router"
 import { useFleetStore } from "@/stores/fleet"
 import { useAlertStore } from "@/stores/alert"
-import { useRealtimeStore } from "@/stores/realtime"
 import { useDelayedLoading } from "@/composables/useDelayedLoading"
 import type { VehicleStatus, AlertSeverity } from "@/types/models"
 
-const route         = useRoute()
-const fleetStore    = useFleetStore()
-const alertStore    = useAlertStore()
-const realtimeStore = useRealtimeStore()
+const route      = useRoute()
+const fleetStore = useFleetStore()
+const alertStore = useAlertStore()
 
 const vehicleId = route.params.vehicleId as string
 
@@ -272,11 +270,9 @@ const { showLoading } = useDelayedLoading(() => fleetStore.isDetailLoading)
 onMounted(async () => {
   await fleetStore.fetchVehicleDetail(vehicleId)
   await alertStore.fetchAlerts({ vehicle_id: vehicleId })
-  realtimeStore.subscribe([vehicleId])
 })
 
 onUnmounted(() => {
-  realtimeStore.unsubscribe([vehicleId])
   fleetStore.clearSelectedVehicle()
 })
 

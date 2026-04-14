@@ -1,3 +1,7 @@
+from datetime import datetime, timezone, timedelta
+import uuid
+import random
+
 from sqlmodel import Session, select
 from sqlalchemy import func, desc
 from chalicelib.models.vehicle import Vehicle, VehicleStatus
@@ -10,7 +14,7 @@ from chalicelib.schemas.vehicle import (
     DriverProfileRead, ActiveTripRead,
 )
 from chalicelib.core.password import get_password_hash
-import uuid
+from chalicelib.core.exceptions import NotFoundException
 
 
 def _build_vehicle_read(session: Session, vehicle: Vehicle) -> VehicleRead:
@@ -110,6 +114,51 @@ class VehicleService:
             **base.model_dump(),
             active_trip=active,
         )
+
+    @staticmethod
+    def update_telemetry(session: Session, vehicle_id: str, payload: dict) -> dict:
+        """시뮬레이터/IoT 단말기로부터 실시간 센서 데이터를 수신하여 저장합니다.
+
+        Args:
+            payload: {
+                latitude, longitude, speed_kmh,
+                battery_level_pct, engine_temp_celsius
+            }
+        """
+        vehicle = session.get(Vehicle, uuid.UUID(vehicle_id))
+        if not vehicle or vehicle.deleted_at:
+            raise NotFoundException(f"Vehicle {vehicle_id} not found")
+
+        speed = float(payload.get("speed_kmh", 0))
+
+        # ── 차량 상태 업데이트 ────────────────────────────────────
+        if speed > 0:
+            vehicle.status = VehicleStatus.RUNNING
+        else:
+            vehicle.status = VehicleStatus.IDLE
+        session.add(vehicle)
+
+        # ── SensorData 삽입 (복합 PK 충돌 방지: 마이크로초 지터 추가) ──
+        jitter = timedelta(microseconds=random.randint(0, 999))
+        now = datetime.now(timezone.utc) + jitter
+
+        sd = SensorData(
+            time=now,
+            vehicle_id=vehicle.id,
+            latitude=payload.get("latitude"),
+            longitude=payload.get("longitude"),
+            speed_kmh=speed,
+            battery_level_pct=payload.get("battery_level_pct"),
+            battery_temp_celsius=payload.get("engine_temp_celsius"),  # 엔진 온도 재사용
+        )
+        session.add(sd)
+        session.commit()
+
+        return {
+            "vehicle_id": str(vehicle.id),
+            "status": vehicle.status,
+            "recorded_at": now.isoformat(),
+        }
 
     @staticmethod
     def seed_demo_vehicles_if_empty(session: Session):

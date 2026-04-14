@@ -111,6 +111,7 @@
 import { ref, onMounted, onUnmounted, defineComponent, h } from "vue"
 import { useFleetStore } from "@/stores/fleet"
 import { useAlertStore } from "@/stores/alert"
+import { useRealtime } from "@/composables/useRealtime"
 import RealtimeMap from "@/components/map/RealtimeMap.vue"
 import type { MapFilter } from "@/components/map/RealtimeMap.vue"
 import type { VehicleStatus } from "@/types/models"
@@ -127,15 +128,18 @@ const filterOptions: { value: MapFilter; label: string }[] = [
   { value: "not-running",  label: "미운행" },
 ]
 
+// 첫 로드 후 데모 시뮬레이션 + 2.5초 폴링 시작
 onMounted(async () => {
   await fleetStore.fetchVehicles({ page_size: 50 })
-  alertStore.fetchAlerts()
+  await alertStore.fetchAlerts()
   fleetStore.startDemoSimulation()
 })
 
 onUnmounted(() => {
   fleetStore.stopDemoSimulation()
 })
+
+useRealtime(2500)
 
 // ── 인라인 StatCard 컴포넌트 ──────────────────────────────────
 const StatCard = defineComponent({

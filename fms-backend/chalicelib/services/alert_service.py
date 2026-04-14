@@ -94,6 +94,47 @@ class AlertService:
         return data, next_cursor, has_next
 
     @staticmethod
+    def create_alert(session: Session, payload: dict) -> AlertRead:
+        """시뮬레이터 또는 내부 로직에서 알림을 직접 생성합니다.
+
+        Args:
+            payload: {
+                vehicle_id (str UUID),
+                alert_type (AlertType str),
+                severity   (AlertSeverity str),
+                title      (str),
+                description (str, optional),
+                speed_at_trigger (float, optional),
+                battery_at_trigger (float, optional),
+                location_lat (float, optional),
+                location_lng (float, optional),
+            }
+        """
+        from chalicelib.models.alert import AlertType, AlertSeverity
+        from chalicelib.core.exceptions import NotFoundException
+
+        vehicle = session.get(Vehicle, uuid.UUID(payload["vehicle_id"]))
+        if not vehicle:
+            raise NotFoundException(f"Vehicle {payload['vehicle_id']} not found")
+
+        alert = Alert(
+            vehicle_id=vehicle.id,
+            triggered_at=datetime.now(timezone.utc),
+            alert_type=AlertType(payload["alert_type"]),
+            severity=AlertSeverity(payload["severity"]),
+            title=payload["title"],
+            description=payload.get("description"),
+            speed_at_trigger=payload.get("speed_at_trigger"),
+            battery_at_trigger=payload.get("battery_at_trigger"),
+            location_lat=payload.get("location_lat"),
+            location_lng=payload.get("location_lng"),
+        )
+        session.add(alert)
+        session.commit()
+        session.refresh(alert)
+        return _build_alert_read(session, alert)
+
+    @staticmethod
     def acknowledge(session: Session, alert_id: str, user_id: str) -> AlertRead:
         alert = session.get(Alert, uuid.UUID(alert_id))
         if not alert:

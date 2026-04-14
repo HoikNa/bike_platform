@@ -1,6 +1,7 @@
 import os
-from chalice import Chalice, Response, CORSConfig
+from chalice import Chalice
 from chalicelib.core.database import create_db_and_tables, get_session
+from chalicelib.core.cors import cors_config
 from chalicelib.services.vehicle_service import VehicleService
 from chalicelib.services.seed_service import SeedService
 
@@ -10,7 +11,7 @@ from chalicelib.routes.alert_routes import alert_bp
 from chalicelib.routes.trip_routes import trip_bp
 
 app = Chalice(app_name="fms-backend")
-app.debug = True
+app.debug = os.environ.get("APP_ENV", "local") == "local"
 
 # Register blueprints
 app.register_blueprint(auth_bp)
@@ -18,9 +19,9 @@ app.register_blueprint(vehicle_bp)
 app.register_blueprint(alert_bp)
 app.register_blueprint(trip_bp)
 
-@app.route("/", methods=["GET"], cors=True)
+@app.route("/", methods=["GET"], cors=cors_config)
 def index():
-    return {"message": "FMS API is running."}
+    return {"message": "FMS API is running.", "env": os.environ.get("APP_ENV", "local")}
 
 from chalicelib.services.auth_service import AuthService
 

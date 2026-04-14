@@ -3,8 +3,21 @@
   "app_name": "fms-backend",
   "stages": {
     "dev": {
-      "api_gateway_stage": "api"
+      "api_gateway_stage": "api",
+      "environment_variables": {
+        "APP_ENV": "local"
+      }
+    },
+    "production": {
+      "api_gateway_stage": "api",
+      "lambda_memory_size": 256,
+      "lambda_timeout": 30,
+      "environment_variables": {
+        "APP_ENV": "production",
+        "DATABASE_URL": "postgresql://postgres.jzaiwyledjrwbtfqovdr:h0o5i0k5as!@aws-1-ap-northeast-2.pooler.supabase.com:5432/postgres",
+        "ALLOWED_ORIGIN": "https://fms-frontend-peach.vercel.app",
+        "JWT_SECRET": "ed7424b50fbb762a7264dd84f9c3533498f38aad98655f359986e79b17565c0d"
+      }
     }
   }
 }
-

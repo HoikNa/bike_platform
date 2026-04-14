@@ -36,6 +36,18 @@ export const useAlertStore = defineStore("alert", () => {
     }
   }
 
+  /** 폴링용 조용한 갱신 — 로딩 스피너 없음 */
+  async function refreshAlerts(): Promise<void> {
+    try {
+      const res       = await alertService.list({ limit: 30 })
+      alerts.value    = res.data
+      nextCursor.value = res.meta.next_cursor
+      hasNext.value    = res.meta.has_next
+    } catch {
+      // 백그라운드 갱신 실패는 무시
+    }
+  }
+
   async function loadMore(): Promise<void> {
     if (!hasNext.value || isLoadingMore.value) return
     isLoadingMore.value = true
@@ -63,6 +75,6 @@ export const useAlertStore = defineStore("alert", () => {
   return {
     alerts, nextCursor, hasNext, isLoading, isLoadingMore,
     unacknowledgedCount, dangerAlerts,
-    fetchAlerts, loadMore, acknowledge, prependAlert,
+    fetchAlerts, refreshAlerts, loadMore, acknowledge, prependAlert,
   }
 })

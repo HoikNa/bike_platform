@@ -3,6 +3,10 @@
 > **스택**: Vue 3.4 · TypeScript · Vite · Pinia · Vue Router 4 · Axios · Socket.IO · TailwindCSS v3  
 > **원칙**: 단방향 데이터 흐름 — View → Store → Service → API
 
+> ⚠️ **[구현 현황 주의]** 이 문서는 **설계 목표** 기준입니다.  
+> 실제 구현 상태(사이드바→상단 헤더, 데모 시뮬레이션, WebSocket 미연결 등)는  
+> **[18_implementation_status.md](18_implementation_status.md)** 를 참고하세요.
+
 ---
 
 ## 목차

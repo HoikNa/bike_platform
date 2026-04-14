@@ -3,6 +3,10 @@
 > **스택**: Python 3.11 · AWS Chalice · SQLModel · PostgreSQL/TimescaleDB · Redis · EMQX MQTT  
 > **원칙**: 관심사 분리(SoC) — Route → Service → Repository → DB 단방향 의존성
 
+> ⚠️ **[구현 현황 주의]** 이 문서는 **설계 목표** 기준입니다.  
+> 실제 구현 상태(SQLite 사용, Repository 레이어 미분리, Redis·MQTT 미구현 등)는  
+> **[18_implementation_status.md](18_implementation_status.md)** 를 참고하세요.
+
 ---
 
 ## 목차

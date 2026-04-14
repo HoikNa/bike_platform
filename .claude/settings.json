@@ -25,7 +25,22 @@
       "Bash(python3 -c \"import sys,json; print\\(json.load\\(sys.stdin\\)['message']\\)\")",
       "Bash(nohup .venv/bin/chalice local --host 0.0.0.0 --port 8000)",
       "Bash(echo \"started PID $!\")",
-      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'total={d[\\\\\"meta\\\\\"][\\\\\"total\\\\\"]} count={len\\(d[\\\\\"data\\\\\"]\\)} first={d[\\\\\"data\\\\\"][0][\\\\\"plate_number\\\\\"] if d[\\\\\"data\\\\\"] else None}'\\)\")"
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'total={d[\\\\\"meta\\\\\"][\\\\\"total\\\\\"]} count={len\\(d[\\\\\"data\\\\\"]\\)} first={d[\\\\\"data\\\\\"][0][\\\\\"plate_number\\\\\"] if d[\\\\\"data\\\\\"] else None}'\\)\")",
+      "Bash(python -m py_compile simulator.py)",
+      "Bash(python -m py_compile chalicelib/routes/vehicle_routes.py)",
+      "Bash(python -m py_compile chalicelib/routes/alert_routes.py)",
+      "Bash(python -m py_compile chalicelib/services/vehicle_service.py)",
+      "Bash(python -m py_compile chalicelib/services/alert_service.py)",
+      "Bash(python3 -m py_compile simulator.py)",
+      "Bash(python3 -m py_compile chalicelib/routes/vehicle_routes.py)",
+      "Bash(python3 -m py_compile chalicelib/routes/alert_routes.py)",
+      "Bash(python3 -m py_compile chalicelib/services/vehicle_service.py)",
+      "Bash(python3 -m py_compile chalicelib/services/alert_service.py)",
+      "Bash(curl -s https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/)",
+      "Bash(curl -s -X POST https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/auth/login -H 'Content-Type: application/json' -H 'Origin: https://fms-frontend-peach.vercel.app' -d '{\"email\":\"admin@fms.com\",\"password\":\"admin1234\"}')",
+      "Bash(curl -s -X POST https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/auth/login -H 'Content-Type: application/json' -H 'Origin: https://fms-frontend-peach.vercel.app' -d '{\"email\":\"admin@fms.io\",\"password\":\"admin123\"}')",
+      "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\nResponse Time: %{time_total}s\\\\n\" https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://fms-frontend-peach.vercel.app/app/dashboard)"
     ]
   }
 }

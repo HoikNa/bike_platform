@@ -1,5 +1,6 @@
 from chalice import Blueprint, Response
 from chalicelib.core.database import get_session
+from chalicelib.core.cors import cors_config
 from chalicelib.services.trip_service import TripService
 from chalicelib.core.exceptions import APIException
 from chalicelib.middlewares.auth import require_role
@@ -7,7 +8,7 @@ from chalicelib.middlewares.auth import require_role
 trip_bp = Blueprint(__name__)
 
 
-@trip_bp.route('/trips', methods=['GET'], cors=True)
+@trip_bp.route('/trips', methods=['GET'], cors=cors_config)
 def get_trips():
     request = trip_bp.current_request
     try:

@@ -211,18 +211,14 @@ function handleOutsideClick(e: MouseEvent) {
 }
 onMounted(() => {
   document.addEventListener("mousedown", handleOutsideClick)
-  realtimeStore.connect([])
-  alertStore.fetchAlerts()
 })
 onUnmounted(() => {
   document.removeEventListener("mousedown", handleOutsideClick)
-  realtimeStore.disconnect()
 })
 
 async function handleLogout() {
   showUserMenu.value = false
   await authStore.logout()
-  realtimeStore.disconnect()
   router.push("/login")
 }
 
