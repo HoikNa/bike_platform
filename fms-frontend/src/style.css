@@ -1,0 +1,76 @@
+/* Noto Sans KR 웹폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+/* Tailwind CSS v3 지시자 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base Layer — HTML 기본 스타일 ──────────────────────────── */
+@layer base {
+  html {
+    @apply font-sans text-secondary-900 bg-background;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    @apply bg-secondary-900 text-secondary-50;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* 스크롤바 스타일 (Webkit) */
+  ::-webkit-scrollbar        { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track  { @apply bg-transparent; }
+  ::-webkit-scrollbar-thumb  { @apply bg-secondary-300 rounded-full dark:bg-secondary-600; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-secondary-400 dark:bg-secondary-500; }
+}
+
+/* ── Components Layer — 재사용 클래스 ───────────────────────── */
+@layer components {
+  /* Z-index 레이어 정책 */
+  .z-raised   { z-index: 10; }  /* 드롭다운, 툴팁 */
+  .z-sticky   { z-index: 20; }  /* 사이드바, 헤더 */
+  .z-overlay  { z-index: 30; }  /* 모달 배경 */
+  .z-modal    { z-index: 40; }  /* 모달 창 */
+  .z-toast    { z-index: 50; }  /* 토스트 알림 */
+
+  /* 상태별 좌측 컬러 바 (차량 리스트 아이템) */
+  .status-bar-running  { @apply bg-success-500; }
+  .status-bar-idle     { @apply bg-secondary-300; }
+  .status-bar-charging { @apply bg-info-500; }
+  .status-bar-alert    { @apply bg-danger-500; }
+  .status-bar-offline  { @apply bg-secondary-200; }
+}
+
+/* ── Utilities Layer — 커스텀 유틸리티 ─────────────────────── */
+@layer utilities {
+  /* 텍스트 계층 (Type Scale) */
+  .text-heading-1 { @apply text-3xl font-bold leading-tight tracking-tight; }
+  .text-heading-2 { @apply text-2xl font-bold leading-snug; }
+  .text-heading-3 { @apply text-xl font-semibold leading-snug; }
+  .text-heading-4 { @apply text-lg font-semibold leading-normal; }
+  .text-heading-5 { @apply text-base font-semibold leading-normal; }
+  .text-heading-6 { @apply text-sm font-semibold leading-normal uppercase tracking-wide; }
+  .text-body-lg   { @apply text-base font-normal leading-relaxed; }
+  .text-body      { @apply text-sm font-normal leading-relaxed; }
+  .text-body-sm   { @apply text-xs font-normal leading-relaxed; }
+  .text-caption   { @apply text-xs font-normal text-secondary-500; }
+  .text-overline  { @apply text-xs font-semibold uppercase tracking-widest text-secondary-400; }
+
+  /* 숫자 고정폭 (속도, 배터리 수치) */
+  .tabular        { @apply tabular-nums; }
+
+  /* iOS Safe Area 패딩 */
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+}

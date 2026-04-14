@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:5173/src/views/DashboardView.vue -o /dev/null -w \"DashboardView.vue 응답: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:5173/src/components/common/BaseCard.vue -o /dev/null -w \"BaseCard.vue 응답: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:5173/src/components/common/StatusBadge.vue -o /dev/null -w \"StatusBadge.vue 응답: %{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:5173/src/components/common/BaseCard.vue)",
+      "Bash(curl -s http://localhost:5173/src/views/DashboardView.vue)",
+      "Bash(pkill -f \"vite --host\")",
+      "Bash(lsof -ti:5173)",
+      "Bash(node -e \"const l = require\\('./node_modules/lucide-vue-next'\\); const keys = Object.keys\\(l\\).filter\\(k => ['Bike','Bicycle','Gauge','Battery','Thermometer','MapPin','AlertTriangle','Info','Zap','X','Navigation'].includes\\(k\\)\\); console.log\\(keys.join\\(', '\\)\\)\")"
+    ]
+  }
+}
