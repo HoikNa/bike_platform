@@ -6,11 +6,10 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior: () => ({ top: 0 }),
   routes: [
-    // ── 루트: 관제 대시보드 (인증 불필요 — 프로토타입 단계) ──
+    // ── 루트: 앱 진입점으로 리다이렉트 ──
     {
       path: "/",
-      name: "Home",
-      component: () => import("@/views/DashboardView.vue"),
+      redirect: "/app",
     },
 
     // ── 인증 (AuthLayout) ─────────────────────────────────

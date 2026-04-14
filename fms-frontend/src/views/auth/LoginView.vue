@@ -17,6 +17,29 @@
       <div class="bg-surface dark:bg-secondary-800 rounded-2xl shadow-xl border border-secondary-200 dark:border-secondary-700 p-8">
         <h2 class="text-lg font-semibold text-secondary-900 dark:text-white mb-6">로그인</h2>
 
+        <!-- 빠른 로그인 (테스트용) -->
+        <div class="mb-6 pb-6 border-b border-slate-100 dark:border-secondary-700">
+          <p class="text-xs font-semibold text-secondary-500 mb-3 uppercase tracking-wider">테스트 계정 자동 로그인</p>
+          <div class="grid grid-cols-2 gap-3">
+            <button
+              type="button"
+              @click="handleQuickLogin('admin@fms.io', 'admin123')"
+              class="flex flex-col items-center justify-center p-3 rounded-xl border border-primary-100 dark:border-primary-900 bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-900/40 transition-colors"
+            >
+              <span class="text-sm font-bold text-primary-700 dark:text-primary-300">관리자 (Admin)</span>
+              <span class="text-xs text-primary-500 dark:text-primary-400 mt-0.5">전체 권한</span>
+            </button>
+            <button
+              type="button"
+              @click="handleQuickLogin('driver@fms.io', 'driver123')"
+              class="flex flex-col items-center justify-center p-3 rounded-xl border border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-800/50 hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-colors"
+            >
+              <span class="text-sm font-bold text-secondary-700 dark:text-secondary-300">사용자 (Driver)</span>
+              <span class="text-xs text-secondary-500 dark:text-secondary-400 mt-0.5">운행 내역 조회</span>
+            </button>
+          </div>
+        </div>
+
         <form @submit.prevent="handleSubmit" class="space-y-5">
 
           <!-- 이메일 -->
@@ -159,6 +182,12 @@ async function handleSubmit() {
     const err = e as { error?: { message?: string } }
     error.value = err?.error?.message ?? "이메일 또는 비밀번호를 확인해 주세요."
   }
+}
+
+async function handleQuickLogin(emailStr: string, passwordStr: string) {
+  form.value.email = emailStr
+  form.value.password = passwordStr
+  await handleSubmit()
 }
 </script>
 

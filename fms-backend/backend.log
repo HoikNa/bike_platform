@@ -1,0 +1,1980 @@
+nohup: ignoring input
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:01:13] "POST /auth/login HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:02:11] "OPTIONS /auth/login HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:02:13] "OPTIONS /auth/login HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:02:16] "OPTIONS /auth/login HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:02:28] "OPTIONS /auth/login HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:03:55] "OPTIONS /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:03:55] "POST /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:03:55] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:03:55] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:03:55] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:03:55] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:03:56] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:03:59] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:02] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:02] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:06] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:06] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:06] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:08] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:11] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:13] "OPTIONS /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:13] "POST /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:14] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:14] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:14] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:14] "GET /alerts?limit=30 HTTP/1.1" 500 -
+127.0.0.1 - - [14/Apr/2026 21:04:14] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:16] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:19] "GET /alerts?limit=30 HTTP/1.1" 500 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:23] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 21:04:23] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:28] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:28] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:30] "OPTIONS /vehicles/a4f7e165-42e0-48e1-8382-4a174bc4d212 HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:33] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:04:33] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:36] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 21:04:36] "OPTIONS /vehicles/153f4935-7b9e-4396-bb08-92d0b6827b6a HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:04:42] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:06:33] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:06:34] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:06:41] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:06:41] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:06:44] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:06:44] "GET /alerts?limit=30 HTTP/1.1" 500 -
+127.0.0.1 - - [14/Apr/2026 21:06:45] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:06:51] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:06:51] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:26:44] "OPTIONS /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:26:44] "GET /auth/me HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:50:49] "OPTIONS /auth/logout HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:51:34] "GET / HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:51:51] "POST /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:51:51] "GET /vehicles?page_size=3 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:51:51] "GET /alerts?limit=3 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:51:51] "GET /trips?page_size=3 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:51:59] "POST /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:51:59] "GET /vehicles?page_size=1 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:52:00] "GET /vehicles/926410eb-c4e0-476c-9968-47115bf8200b HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:52:00] "GET /alerts?limit=1&is_acknowledged=false HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:52:00] "PATCH /alerts/3f937fb2-bb2d-440d-a8ed-876e7ef4eb57/acknowledge HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:20] "OPTIONS /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "POST /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "GET /alerts?limit=30 HTTP/1.1" 500 -
+127.0.0.1 - - [14/Apr/2026 21:53:20] "GET /alerts?limit=30 HTTP/1.1" 500 -
+127.0.0.1 - - [14/Apr/2026 21:53:21] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:27] "OPTIONS /vehicles/926410eb-c4e0-476c-9968-47115bf8200b HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:27] "GET /vehicles/926410eb-c4e0-476c-9968-47115bf8200b HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:27] "OPTIONS /alerts?limit=30&vehicle_id=926410eb-c4e0-476c-9968-47115bf8200b HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:27] "GET /alerts?limit=30&vehicle_id=926410eb-c4e0-476c-9968-47115bf8200b HTTP/1.1" 500 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:32] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:32] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:32] "GET /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:32] "GET /alerts?limit=30 HTTP/1.1" 500 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:39] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:45] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:48] "OPTIONS /auth/logout HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 21:53:49] "OPTIONS /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:49] "POST /auth/login HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:49] "OPTIONS /vehicles?page_size=8 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:49] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:53:49] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:53:58] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:54:02] "OPTIONS /alerts/acknowledge-bulk HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 21:54:02] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:54:08] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:54:14] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:54:17] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:54:17] "GET /trips?page=1&page_size=20 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:54:22] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:54:22] "GET /trips?page=1&page_size=20 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:56:21] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:56:21] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 21:56:21] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:56:21] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:56:21] "GET /trips?page=1&page_size=20 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:56:28] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:56:34] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:56:41] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:56:46] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:58:08] "OPTIONS /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:58:08] "GET /auth/me HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 458, in __init__
+    self.server_activate()
+  File "/usr/lib/python3.12/socketserver.py", line 482, in server_activate
+    self.socket.listen(self.request_queue_size)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:58:57] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:59:03] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:59:09] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:59:49] "OPTIONS /auth/logout HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:59:55] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:59:55] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:59:55] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:59:55] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 21:59:55] "GET /alerts?limit=30 HTTP/1.1" 500 -
+127.0.0.1 - - [14/Apr/2026 21:59:55] "GET /alerts?limit=30 HTTP/1.1" 500 -
+127.0.0.1 - - [14/Apr/2026 21:59:55] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 21:59:58] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:03] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:09] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:14] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:20] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:26] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:00:26] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:34] "OPTIONS /auth/logout HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:40] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 22:00:40] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:00:40] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:50] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:00:55] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 458, in __init__
+    self.server_activate()
+  File "/usr/lib/python3.12/socketserver.py", line 482, in server_activate
+    self.socket.listen(self.request_queue_size)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:01:01] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:01:07] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:07] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:07] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:07] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:01:19] "OPTIONS /trips?page=1&page_size=20 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:19] "GET /trips?page=1&page_size=20 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:01:29] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:29] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:29] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:01:29] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:04:45] "OPTIONS /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:45] "GET /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:45] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:45] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:45] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:45] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:45] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:46] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:04:52] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:04:58] "OPTIONS /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:58] "GET /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:58] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:58] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:58] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:59] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:59] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:04:59] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:05:10] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:05:16] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:06:28] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:06:28] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:07:35] "OPTIONS /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:35] "GET /auth/me HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:35] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:35] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:35] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:35] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:07:40] "OPTIONS /auth/logout HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:07:44] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+127.0.0.1 - - [14/Apr/2026 22:07:44] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:44] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:44] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:44] "GET /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:44] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:07:44] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:07:46] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:07:56] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:08:01] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:08:07] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 403 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:08:54] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:08:54] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:08:59] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:08:59] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:09:06] "OPTIONS /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:09:06] "GET /vehicles?page=1&page_size=15 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:09:11] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:09:11] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.
+127.0.0.1 - - [14/Apr/2026 22:09:23] "OPTIONS /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:09:23] "OPTIONS /alerts?limit=30 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:09:23] "GET /vehicles?page_size=50 HTTP/1.1" 200 -
+127.0.0.1 - - [14/Apr/2026 22:09:23] "GET /alerts?limit=30 HTTP/1.1" 200 -
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Serving on http://127.0.0.1:8000
+Restarting local dev server.
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 730, in run
+    self._server = self._server_factory()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/__init__.py", line 149, in create_local_server
+    server = factory.create_local_server(app_obj, config, host, port)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/cli/factory.py", line 341, in create_local_server
+    return local.create_local_server(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 63, in create_local_server
+    return LocalDevServer(app_obj, config, host, port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hoik02/bikeplatform/fms-backend/.venv/lib/python3.12/site-packages/chalice/local.py", line 700, in __init__
+    self.server = server_cls((host, port), self._wrapped_handler)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.12/socketserver.py", line 473, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+Restarting local dev server.

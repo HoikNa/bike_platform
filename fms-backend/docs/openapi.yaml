@@ -1,0 +1,310 @@
+openapi: 3.0.3
+info:
+  title: Intelligent Bike FMS Backend API
+  version: 0.1.0
+  description: Chalice + SQLModel backend API specification.
+servers:
+  - url: http://localhost:8000
+paths:
+  /vehicles:
+    get:
+      summary: List vehicles
+      parameters:
+        - in: query
+          name: limit
+          schema: { type: integer, minimum: 1, maximum: 100, default: 50 }
+        - in: query
+          name: offset
+          schema: { type: integer, minimum: 0, default: 0 }
+        - in: query
+          name: sort
+          schema: { type: string, enum: [id, plate_number], default: id }
+        - in: query
+          name: order
+          schema: { type: string, enum: [asc, desc], default: asc }
+      responses:
+        "200":
+          description: Vehicle list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VehicleListResponse"
+        "400":
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Database error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    post:
+      summary: Create vehicle with initial sensor status
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VehicleCreateRequest"
+      responses:
+        "201":
+          description: Vehicle created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VehicleCreateResponse"
+        "400":
+          description: Invalid payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /vehicles/{vehicle_id}:
+    get:
+      summary: Get vehicle detail with latest sensor status
+      parameters:
+        - in: path
+          name: vehicle_id
+          required: true
+          schema: { type: integer }
+      responses:
+        "200":
+          description: Vehicle detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VehicleDetailResponse"
+        "400":
+          description: Invalid vehicle id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Vehicle not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /alerts:
+    get:
+      summary: List alerts
+      parameters:
+        - in: query
+          name: limit
+          schema: { type: integer, minimum: 1, maximum: 100, default: 50 }
+        - in: query
+          name: offset
+          schema: { type: integer, minimum: 0, default: 0 }
+        - in: query
+          name: sort
+          schema: { type: string, enum: [timestamp, id], default: timestamp }
+        - in: query
+          name: order
+          schema: { type: string, enum: [asc, desc], default: desc }
+      responses:
+        "200":
+          description: Alert list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AlertListResponse"
+        "400":
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+    post:
+      summary: Create alert
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AlertCreateRequest"
+      responses:
+        "201":
+          description: Alert created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AlertCreateResponse"
+        "400":
+          description: Invalid payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Vehicle not found
+        status:
+          type: integer
+          example: 404
+      required: [error, status]
+
+    Meta:
+      type: object
+      properties:
+        limit:
+          type: integer
+        offset:
+          type: integer
+        total:
+          type: integer
+        total_pages:
+          type: integer
+        sort:
+          type: string
+        order:
+          type: string
+      required: [limit, offset, total, total_pages, sort, order]
+
+    Vehicle:
+      type: object
+      properties:
+        id:
+          type: integer
+        plate_number:
+          type: string
+        status:
+          type: string
+        driver_name:
+          type: string
+          nullable: true
+      required: [id, plate_number, status]
+
+    SensorStatus:
+      type: object
+      properties:
+        battery_level:
+          type: number
+        engine_temperature:
+          type: number
+        speed:
+          type: number
+        latitude:
+          type: number
+        longitude:
+          type: number
+        timestamp:
+          type: string
+          format: date-time
+      required:
+        [battery_level, engine_temperature, speed, latitude, longitude, timestamp]
+
+    VehicleDetail:
+      allOf:
+        - $ref: "#/components/schemas/Vehicle"
+        - type: object
+          properties:
+            latest_sensor_status:
+              $ref: "#/components/schemas/SensorStatus"
+              nullable: true
+
+    Alert:
+      type: object
+      properties:
+        id:
+          type: integer
+        vehicle_id:
+          type: integer
+        type:
+          type: string
+        message:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+      required: [id, vehicle_id, type, message, timestamp]
+
+    VehicleCreateRequest:
+      type: object
+      properties:
+        plate_number:
+          type: string
+        status:
+          type: string
+          default: IDLE
+        driver_name:
+          type: string
+          nullable: true
+      required: [plate_number]
+
+    AlertCreateRequest:
+      type: object
+      properties:
+        vehicle_id:
+          type: integer
+        type:
+          type: string
+        message:
+          type: string
+      required: [vehicle_id, type, message]
+
+    VehicleListResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Vehicle"
+        meta:
+          $ref: "#/components/schemas/Meta"
+      required: [status, data, meta]
+
+    VehicleCreateResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 201
+        data:
+          $ref: "#/components/schemas/Vehicle"
+      required: [status, data]
+
+    VehicleDetailResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        data:
+          $ref: "#/components/schemas/VehicleDetail"
+      required: [status, data]
+
+    AlertListResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 200
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Alert"
+        meta:
+          $ref: "#/components/schemas/Meta"
+      required: [status, data, meta]
+
+    AlertCreateResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 201
+        data:
+          $ref: "#/components/schemas/Alert"
+      required: [status, data]

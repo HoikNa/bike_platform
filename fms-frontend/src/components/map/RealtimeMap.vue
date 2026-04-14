@@ -10,15 +10,15 @@
       <!-- ── 운행 경로 SVG (차량 선택 시) ─────────────────────── -->
       <Transition name="fade">
         <svg
-          v-if="fleetStore.selectedBikeId"
+          v-if="fleetStore.selectedVehicleId"
           class="absolute inset-0 w-full h-full pointer-events-none"
           style="z-index: 500;"
         >
           <!-- 비선택 running 차량 경로 (흐리게) -->
           <polyline
-            v-for="bike in unselectedRunningBikes"
-            :key="'route-other-' + bike.id"
-            :points="polylinePixelPoints(bike.id)"
+            v-for="v in unselectedRunningVehicles"
+            :key="'route-other-' + v.id"
+            :points="polylinePixelPoints(v.id)"
             fill="none"
             stroke="#94a3b8"
             stroke-width="1.5"
@@ -29,7 +29,7 @@
 
           <!-- 선택 차량 경로: 글로우 -->
           <polyline
-            :points="polylinePixelPoints(fleetStore.selectedBikeId)"
+            :points="polylinePixelPoints(fleetStore.selectedVehicleId)"
             fill="none"
             stroke="#3b82f6"
             stroke-width="6"
@@ -39,57 +39,91 @@
           />
           <!-- 선택 차량 경로: 주선 -->
           <polyline
-            :points="polylinePixelPoints(fleetStore.selectedBikeId)"
+            :points="polylinePixelPoints(fleetStore.selectedVehicleId)"
             fill="none"
             stroke="#3b82f6"
             stroke-width="2.5"
             stroke-opacity="0.85"
-            stroke-dasharray="8 4"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-          <!-- 출발점 (초록 원) -->
-          <circle
-            v-if="startPointPixel(fleetStore.selectedBikeId)"
-            :cx="startPointPixel(fleetStore.selectedBikeId)!.x"
-            :cy="startPointPixel(fleetStore.selectedBikeId)!.y"
-            r="5"
-            fill="#10b981"
-            fill-opacity="0.9"
-            stroke="white"
-            stroke-width="1.5"
-          />
+
+          <!-- 방향 화살표 -->
+          <g
+            v-for="(arrow, i) in routeArrows(fleetStore.selectedVehicleId)"
+            :key="'arrow-' + i"
+            :transform="`translate(${arrow.x},${arrow.y}) rotate(${arrow.angle})`"
+          >
+            <!-- 흰 배경 원 -->
+            <circle r="6" fill="white" fill-opacity="0.85" />
+            <!-- 화살표 머리 (오른쪽을 기준으로 그린 뒤 회전) -->
+            <path d="M-3.5,-3 L3.5,0 L-3.5,3" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+
+          <!-- 출발점 (초록 원 + "출발" 라벨) -->
+          <g v-if="startPointPixel(fleetStore.selectedVehicleId)">
+            <circle
+              :cx="startPointPixel(fleetStore.selectedVehicleId)!.x"
+              :cy="startPointPixel(fleetStore.selectedVehicleId)!.y"
+              r="6"
+              fill="#10b981"
+              fill-opacity="0.95"
+              stroke="white"
+              stroke-width="1.5"
+            />
+            <text
+              :x="startPointPixel(fleetStore.selectedVehicleId)!.x"
+              :y="startPointPixel(fleetStore.selectedVehicleId)!.y - 10"
+              text-anchor="middle"
+              font-size="9"
+              font-weight="700"
+              fill="#10b981"
+              stroke="white"
+              stroke-width="3"
+              paint-order="stroke"
+            >출발</text>
+          </g>
         </svg>
       </Transition>
 
       <!-- ── 차량 마커 ─────────────────────────────────────────── -->
       <div
-        v-for="bike in fleetStore.bikes"
-        :key="bike.id"
-        :style="markerStyle(bike)"
-        :class="['absolute cursor-pointer group transition-opacity duration-300', markerOpacity(bike)]"
+        v-for="v in visibleVehicles"
+        :key="v.id"
+        :style="markerStyle(v)"
+        :class="['absolute cursor-pointer group transition-opacity duration-300', markerOpacity(v)]"
         style="z-index: 600; transform: translate(-50%, -100%);"
-        @click="handleMarkerClick(bike.id)"
+        @click="handleMarkerClick(v.id)"
       >
         <!-- 선택 강조 링 -->
-        <div v-if="fleetStore.selectedBikeId === bike.id"
+        <div v-if="fleetStore.selectedVehicleId === v.id"
              class="absolute -inset-1.5 rounded-full border-2 border-primary-400 animate-pulse" />
         <!-- ping 애니메이션 -->
-        <span v-if="bike.status === 'running'"
-              :class="['absolute inset-0 rounded-full animate-ping opacity-60', statusPingColor(bike.status)]" />
+        <span v-if="v.status === 'RUNNING'"
+              :class="['absolute inset-0 rounded-full animate-ping opacity-60', statusPingColor(v.status)]" />
         <!-- 마커 핀 -->
-        <div :class="['relative w-7 h-7 rounded-full border-2 border-white shadow-lg flex items-center justify-center group-hover:scale-125 group-hover:shadow-xl transition-transform duration-150', markerBgColor(bike.status)]">
+        <div :class="['relative w-7 h-7 rounded-full border-2 border-white shadow-lg flex items-center justify-center group-hover:scale-125 group-hover:shadow-xl transition-transform duration-150', markerBgColor(v.status)]">
           <Bike class="w-3.5 h-3.5 text-white" />
+        </div>
+        <!-- 알림 뱃지 -->
+        <div
+          v-if="latestAlert(v.id)"
+          :class="['absolute top-full left-1/2 -translate-x-1/2 mt-1 px-1.5 py-0.5 rounded-full text-[9px] font-bold whitespace-nowrap shadow pointer-events-none', alertPillClass(latestAlert(v.id)!.severity)]"
+        >
+          {{ shortAlertTitle(latestAlert(v.id)!.title) }}
         </div>
         <!-- 툴팁 -->
         <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2.5 hidden group-hover:block pointer-events-none"
              style="z-index: 700;">
           <div class="bg-secondary-900/95 text-white text-xs rounded-lg px-2.5 py-1.5 whitespace-nowrap shadow-xl">
-            <p class="font-semibold">{{ bike.plate_number }}</p>
-            <p class="text-secondary-300 mt-0.5">{{ bike.speed_kmh ?? 0 }} km/h · {{ Math.round(bike.battery_level) }}%</p>
-            <p class="text-secondary-400">{{ bike.driver_name ?? '미배정' }}</p>
-            <p v-if="fleetStore.selectedBikeId === bike.id" class="text-blue-300 mt-0.5">
-              경로 {{ filteredHistory(bike.id).length }}점 · 최근 6시간
+            <p class="font-semibold">{{ v.plate_number }}</p>
+            <p class="text-secondary-300 mt-0.5">
+              {{ currentSensor(v)?.speed_kmh?.toFixed(0) ?? 0 }} km/h
+              · {{ currentSensor(v)?.battery_level_pct?.toFixed(0) ?? '—' }}%
+            </p>
+            <p class="text-secondary-400">{{ v.assigned_driver?.user_full_name ?? '미배정' }}</p>
+            <p v-if="fleetStore.selectedVehicleId === v.id" class="text-blue-300 mt-0.5">
+              경로 {{ filteredHistory(v.id).length }}점
             </p>
           </div>
           <div class="w-2 h-2 bg-secondary-900/95 rotate-45 mx-auto -mt-1" />
@@ -171,91 +205,115 @@
         충전 <strong class="text-info-600 dark:text-info-400">{{ fleetStore.chargingCount }}</strong>
       </span>
       <span class="w-px h-3 bg-slate-200 dark:bg-secondary-600" />
-      <span class="text-xs text-secondary-500 dark:text-secondary-400">총 {{ fleetStore.bikes.length }}대</span>
+      <span class="text-xs text-secondary-500 dark:text-secondary-400">총 {{ fleetStore.vehicles.length }}대</span>
     </div>
 
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from "vue"
+import { ref, computed, watch, onMounted, onUnmounted } from "vue"
 import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 import { Bike, Plus, Minus } from "lucide-vue-next"
-import { useFleetStore } from "@/stores/useFleetStore"
-import type { Bike as BikeType, BikeStatus } from "@/stores/useFleetStore"
+import { useFleetStore } from "@/stores/fleet"
+import { useAlertStore } from "@/stores/alert"
+import type { Vehicle, VehicleStatus, LatestSensor } from "@/types/models"
+import type { PositionPoint } from "@/stores/fleet"
 
 // ── Props ──────────────────────────────────────────────────────
-export type MapFilter = "all" | "running" | "low-battery"
+export type MapFilter = "all" | "running" | "low-battery" | "not-running"
 const props = withDefaults(defineProps<{ filter?: MapFilter }>(), { filter: "all" })
 
 // ── 스토어 ──────────────────────────────────────────────────────
 const fleetStore = useFleetStore()
+const alertStore = useAlertStore()
+
+// ── 차량별 최신 미확인 알림 ────────────────────────────────────────
+function latestAlert(vehicleId: string) {
+  return alertStore.alerts.find(a => !a.is_acknowledged && a.vehicle.id === vehicleId) ?? null
+}
+
+function alertPillClass(severity: string): string {
+  if (severity === "DANGER")  return "bg-danger-500 text-white"
+  if (severity === "WARNING") return "bg-warning-400 text-white"
+  return "bg-info-500 text-white"
+}
+
+function shortAlertTitle(title: string): string {
+  return title.length > 6 ? title.slice(0, 6) + "…" : title
+}
 
 // ── Leaflet 인스턴스 ────────────────────────────────────────────
-const mapEl      = ref<HTMLElement>()
-const mapInst    = ref<L.Map | null>(null)
-const tileLayer  = ref<L.TileLayer | null>(null)
-const mapReady   = ref(false)
-const mapTick    = ref(0)   // move/zoom 시 증가 → 마커 좌표 재계산 트리거
+const mapEl    = ref<HTMLElement>()
+const mapInst  = ref<L.Map | null>(null)
+const tileLayer = ref<L.TileLayer | null>(null)
+const mapReady  = ref(false)
+const mapTick   = ref(0)
 
-// ── 줌 범위 ──────────────────────────────────────────────────────
 const MIN_ZOOM = 10
 const MAX_ZOOM = 18
 const currentZoom = computed(() => {
-  void mapTick.value  // reactive dependency
-  return mapInst.value?.getZoom() ?? 12
+  void mapTick.value
+  return mapInst.value?.getZoom() ?? 14
 })
 
-// ── 타일 URL (다크/라이트) ────────────────────────────────────────
 const TILE_LIGHT = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
 const TILE_DARK  = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
 const TILE_ATTR  =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ' +
   '&copy; <a href="https://carto.com/attributions">CARTO</a>'
 
+// ── 위치가 있는 차량만 표시 ──────────────────────────────────────
+const visibleVehicles = computed(() =>
+  fleetStore.vehicles.filter(v => {
+    const s = currentSensor(v)
+    return s?.latitude != null && s?.longitude != null
+  })
+)
+
+// ── 현재 센서 데이터 (실시간 우선, 없으면 latest_sensor) ────────
+function currentSensor(v: Vehicle): LatestSensor | null {
+  return fleetStore.realtimeLocations.get(v.id) ?? v.latest_sensor ?? null
+}
+
 // ── Leaflet 초기화 ───────────────────────────────────────────────
 onMounted(() => {
-  // 다크모드 감지
   const isDark = () => document.documentElement.classList.contains("dark")
 
   const map = L.map(mapEl.value!, {
-    center:           [37.5548, 127.0420],  // 성동구 중심
-    zoom:             15,
+    center:           [37.5548, 127.0420],
+    zoom:             14,
     zoomControl:      false,
     attributionControl: true,
     minZoom:          MIN_ZOOM,
     maxZoom:          MAX_ZOOM,
   })
 
-  // 초기 타일 레이어
   tileLayer.value = L.tileLayer(
     isDark() ? TILE_DARK : TILE_LIGHT,
     { maxZoom: MAX_ZOOM, attribution: TILE_ATTR, subdomains: "abcd" }
   ).addTo(map)
 
-  // 지도 이동/줌 시 마커 위치 갱신
   map.on("move zoom", () => { mapTick.value++ })
   map.whenReady(() => { mapReady.value = true; mapTick.value++ })
 
   mapInst.value = map
 
-  // 컨테이너 크기 변화 감지 → Leaflet에 알림
   const resizeObserver = new ResizeObserver(() => {
     map.invalidateSize()
     mapTick.value++
   })
   resizeObserver.observe(mapEl.value!)
 
-  // 다크모드 전환 감지 → 타일 교체
   const darkObserver = new MutationObserver(() => {
     if (!mapInst.value || !tileLayer.value) return
     const dark = isDark()
-    mapInst.value.removeLayer(tileLayer.value)
+    mapInst.value.removeLayer(tileLayer.value as unknown as L.Layer)
     tileLayer.value = L.tileLayer(
       dark ? TILE_DARK : TILE_LIGHT,
       { maxZoom: MAX_ZOOM, attribution: TILE_ATTR, subdomains: "abcd" }
-    ).addTo(mapInst.value)
+    ).addTo(mapInst.value as unknown as L.Map)
   })
   darkObserver.observe(document.documentElement, {
     attributes: true, attributeFilter: ["class"],
@@ -271,71 +329,83 @@ onMounted(() => {
 // ── 위도·경도 → 화면 픽셀 좌표 ──────────────────────────────────
 function latlngToPixel(lat: number, lng: number): { x: number; y: number } {
   if (!mapInst.value) return { x: -9999, y: -9999 }
-  void mapTick.value  // reactive dependency
+  void mapTick.value
   const pt = mapInst.value.latLngToContainerPoint([lat, lng])
   return { x: pt.x, y: pt.y }
 }
 
 // ── 마커 스타일 (픽셀 위치) ─────────────────────────────────────
-function markerStyle(bike: BikeType): Record<string, string> {
-  const { x, y } = latlngToPixel(bike.lat, bike.lng)
+function markerStyle(v: Vehicle): Record<string, string> {
+  const s = currentSensor(v)
+  if (!s?.latitude || !s?.longitude) return { display: "none" }
+  const { x, y } = latlngToPixel(s.latitude, s.longitude)
   return { left: `${x}px`, top: `${y}px` }
 }
 
 // ── 상태 색상 ──────────────────────────────────────────────────
-function markerBgColor(status: BikeStatus): string {
-  const m: Record<BikeStatus, string> = {
-    running: "bg-success-500", idle: "bg-secondary-400",
-    charging: "bg-info-500",   alert: "bg-danger-500", offline: "bg-secondary-300",
+function markerBgColor(status: VehicleStatus): string {
+  const m: Record<VehicleStatus, string> = {
+    RUNNING: "bg-success-500", IDLE: "bg-secondary-400",
+    CHARGING: "bg-info-500",   ALERT: "bg-danger-500", OFFLINE: "bg-secondary-300",
   }
-  return m[status]
+  return m[status] ?? "bg-secondary-400"
 }
-function statusPingColor(status: BikeStatus): string {
-  const m: Record<BikeStatus, string> = {
-    running: "bg-success-400", idle: "bg-secondary-300",
-    charging: "bg-info-400",   alert: "bg-danger-400", offline: "bg-transparent",
+function statusPingColor(status: VehicleStatus): string {
+  const m: Record<VehicleStatus, string> = {
+    RUNNING: "bg-success-400", IDLE: "bg-secondary-300",
+    CHARGING: "bg-info-400",   ALERT: "bg-danger-400", OFFLINE: "bg-transparent",
   }
-  return m[status]
+  return m[status] ?? "bg-transparent"
 }
 
-// ── 마커 클릭 (토글 선택) ──────────────────────────────────────
+// ── 마커 클릭 ──────────────────────────────────────────────────
 function handleMarkerClick(id: string): void {
-  fleetStore.selectBike(fleetStore.selectedBikeId === id ? null : id)
+  fleetStore.selectVehicle(fleetStore.selectedVehicleId === id ? null : id)
 }
+
+// ── 선택 차량으로 지도 이동 ────────────────────────────────────
+watch(() => fleetStore.selectedVehicleId, (id) => {
+  if (!id || !mapInst.value) return
+  const vehicle = fleetStore.vehicles.find(v => v.id === id)
+  if (!vehicle) return
+  const sensor = fleetStore.realtimeLocations.get(id) ?? vehicle.latest_sensor
+  if (sensor?.latitude && sensor?.longitude) {
+    mapInst.value.panTo([sensor.latitude, sensor.longitude], { animate: true, duration: 0.5 })
+  }
+})
 
 // ── 필터 가시성 ────────────────────────────────────────────────
-const LOW_BATTERY_THRESHOLD = 30
-
-function isHighlighted(bike: BikeType): boolean {
+function isHighlighted(v: Vehicle): boolean {
   switch (props.filter) {
-    case "running":     return bike.status === "running"
-    case "low-battery": return bike.battery_level <= LOW_BATTERY_THRESHOLD && bike.status !== "offline"
+    case "running":     return v.status === "RUNNING"
+    case "low-battery": {
+      const pct = currentSensor(v)?.battery_level_pct
+      return pct != null && pct <= 30 && v.status !== "OFFLINE"
+    }
+    case "not-running": return v.status === "IDLE" || v.status === "OFFLINE"
     default:            return true
   }
 }
 
-function markerOpacity(bike: BikeType): string {
-  // 선택된 차량은 항상 완전히 보임
-  if (bike.id === fleetStore.selectedBikeId) return "opacity-100"
-  // 필터에 맞지 않는 차량: 강하게 희미하게
-  if (!isHighlighted(bike)) return "opacity-10"
-  // 필터는 통과했지만 다른 차량이 선택된 경우: 약하게 희미하게
-  if (fleetStore.selectedBikeId) return "opacity-30"
+function markerOpacity(v: Vehicle): string {
+  if (v.id === fleetStore.selectedVehicleId) return "opacity-100"
+  if (!isHighlighted(v)) return "opacity-10"
+  if (fleetStore.selectedVehicleId) return "opacity-30"
   return "opacity-100"
 }
 
-// ── 운행 경로: 최근 6시간 이력 필터 ────────────────────────────
+// ── 운행 경로 ──────────────────────────────────────────────────
 const SIX_HOURS_MS = 6 * 3_600_000
 
-function filteredHistory(bikeId: string) {
+function filteredHistory(vehicleId: string): PositionPoint[] {
   const cutoff = Date.now() - SIX_HOURS_MS
-  return (fleetStore.positionHistory[bikeId] ?? []).filter(p => p.timestamp >= cutoff)
+  return (fleetStore.positionHistory.get(vehicleId) ?? []).filter(p => p.timestamp >= cutoff)
 }
 
-function polylinePixelPoints(bikeId: string): string {
+function polylinePixelPoints(vehicleId: string): string {
   if (!mapInst.value) return ""
-  void mapTick.value  // reactive dependency
-  return filteredHistory(bikeId)
+  void mapTick.value
+  return filteredHistory(vehicleId)
     .map(p => {
       const pt = mapInst.value!.latLngToContainerPoint([p.lat, p.lng])
       return `${pt.x.toFixed(1)},${pt.y.toFixed(1)}`
@@ -343,18 +413,70 @@ function polylinePixelPoints(bikeId: string): string {
     .join(" ")
 }
 
-function startPointPixel(bikeId: string | null): { x: number; y: number } | null {
-  if (!bikeId || !mapInst.value) return null
-  void mapTick.value  // reactive dependency
-  const h = filteredHistory(bikeId)
+function startPointPixel(vehicleId: string | null): { x: number; y: number } | null {
+  if (!vehicleId || !mapInst.value) return null
+  void mapTick.value
+  const h = filteredHistory(vehicleId)
   if (!h.length) return null
   const pt = mapInst.value.latLngToContainerPoint([h[0].lat, h[0].lng])
   return { x: pt.x, y: pt.y }
 }
 
-const unselectedRunningBikes = computed(() =>
-  fleetStore.bikes.filter(
-    b => b.status === "running" && b.id !== fleetStore.selectedBikeId
+// ── 경로 방향 화살표 ──────────────────────────────────────────
+const ARROW_SPACING_PX = 65   // 화살표 간격 (픽셀)
+
+interface ArrowMarker {
+  x:     number
+  y:     number
+  angle: number   // 회전각도 (도), 오른쪽=0
+}
+
+function routeArrows(vehicleId: string | null): ArrowMarker[] {
+  if (!vehicleId || !mapInst.value) return []
+  void mapTick.value
+  const history = filteredHistory(vehicleId)
+  if (history.length < 2) return []
+
+  // 히스토리 포인트를 픽셀 좌표로 변환
+  const pixels = history.map(p => {
+    const pt = mapInst.value!.latLngToContainerPoint([p.lat, p.lng])
+    return { x: pt.x, y: pt.y }
+  })
+
+  const result: ArrowMarker[] = []
+  // 첫 화살표를 경로 중간쯤에 두기 위해 절반 간격부터 시작
+  let accumulated = ARROW_SPACING_PX * 0.5
+
+  for (let i = 1; i < pixels.length; i++) {
+    const prev = pixels[i - 1]
+    const curr = pixels[i]
+    const dx   = curr.x - prev.x
+    const dy   = curr.y - prev.y
+    const segLen = Math.sqrt(dx * dx + dy * dy)
+    if (segLen < 0.5) continue
+
+    const angle = Math.atan2(dy, dx) * 180 / Math.PI
+    let walked = 0
+
+    while (accumulated + (segLen - walked) >= ARROW_SPACING_PX) {
+      const need = ARROW_SPACING_PX - accumulated
+      walked += need
+      const t = walked / segLen
+      result.push({
+        x:     prev.x + dx * t,
+        y:     prev.y + dy * t,
+        angle,
+      })
+      accumulated = 0
+    }
+    accumulated += segLen - walked
+  }
+  return result
+}
+
+const unselectedRunningVehicles = computed(() =>
+  fleetStore.vehicles.filter(
+    v => v.status === "RUNNING" && v.id !== fleetStore.selectedVehicleId
   )
 )
 
@@ -370,7 +492,6 @@ function onSliderInput(e: Event): void {
 .fade-enter-active, .fade-leave-active { transition: opacity 0.3s ease; }
 .fade-enter-from, .fade-leave-to        { opacity: 0; }
 
-/* Leaflet attribution을 방해받지 않도록 우측 하단 여백 확보 */
 :deep(.leaflet-control-attribution) {
   font-size: 9px;
   opacity: 0.6;

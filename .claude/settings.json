@@ -8,7 +8,24 @@
       "Bash(curl -s http://localhost:5173/src/views/DashboardView.vue)",
       "Bash(pkill -f \"vite --host\")",
       "Bash(lsof -ti:5173)",
-      "Bash(node -e \"const l = require\\('./node_modules/lucide-vue-next'\\); const keys = Object.keys\\(l\\).filter\\(k => ['Bike','Bicycle','Gauge','Battery','Thermometer','MapPin','AlertTriangle','Info','Zap','X','Navigation'].includes\\(k\\)\\); console.log\\(keys.join\\(', '\\)\\)\")"
+      "Bash(node -e \"const l = require\\('./node_modules/lucide-vue-next'\\); const keys = Object.keys\\(l\\).filter\\(k => ['Bike','Bicycle','Gauge','Battery','Thermometer','MapPin','AlertTriangle','Info','Zap','X','Navigation'].includes\\(k\\)\\); console.log\\(keys.join\\(', '\\)\\)\")",
+      "Bash(rm -f fms_local_v2.db)",
+      "Bash(.venv/bin/python -c ':*)",
+      "Bash(.venv/bin/chalice local:*)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s -X POST http://localhost:8000/auth/login -H 'Content-Type: application/json' -d '{\"email\":\"admin@fms.io\",\"password\":\"admin123\"}')",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://0.0.0.0:5173/)",
+      "Bash(pkill -f \"node\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP: %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(nohup npm:*)",
+      "Bash(echo \"PID: $!\")",
+      "Read(//tmp/**)",
+      "Bash(python3 -c \"import sys,json; print\\(json.load\\(sys.stdin\\)['message']\\)\")",
+      "Bash(nohup .venv/bin/chalice local --host 0.0.0.0 --port 8000)",
+      "Bash(echo \"started PID $!\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(f'total={d[\\\\\"meta\\\\\"][\\\\\"total\\\\\"]} count={len\\(d[\\\\\"data\\\\\"]\\)} first={d[\\\\\"data\\\\\"][0][\\\\\"plate_number\\\\\"] if d[\\\\\"data\\\\\"] else None}'\\)\")"
     ]
   }
 }

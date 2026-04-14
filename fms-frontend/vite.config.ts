@@ -11,6 +11,7 @@ export default defineConfig({
     },
   },
   server: {
+    host: "0.0.0.0",
     port: 5173,
     proxy: {
       // 개발 환경에서 CORS 우회: /api/* → 백엔드 서버

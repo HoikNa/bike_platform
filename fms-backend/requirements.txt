@@ -1,0 +1,6 @@
+chalice
+sqlmodel
+pydantic
+sqlalchemy
+bcrypt==5.0.0
+PyJWT==2.12.1
