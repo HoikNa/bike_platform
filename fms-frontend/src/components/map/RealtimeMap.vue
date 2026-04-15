@@ -278,7 +278,7 @@ function currentSensor(v: Vehicle): LatestSensor | null {
 // ── Leaflet 초기화 ───────────────────────────────────────────────
 onMounted(() => {
   const map = L.map(mapEl.value!, {
-    center:             [35.8799, 128.6285],  // 동대구역
+    center:             [37.5005, 127.0390],  // 테헤란로 (fallback)
     zoom:               15,
     zoomControl:        false,
     attributionControl: true,
@@ -298,6 +298,29 @@ onMounted(() => {
 
   mapInst.value = map
 
+  // ── 최초 1회만: 차량 위치가 생기면 그 중심으로 지도 이동 ──────
+  let autocentered = false
+  const unwatchCenter = watch(
+    () => fleetStore.realtimeLocations.size,
+    (size) => {
+      if (autocentered || size === 0) return
+      const lats: number[] = []
+      const lngs: number[] = []
+      for (const sensor of fleetStore.realtimeLocations.values()) {
+        if (sensor.latitude != null && sensor.longitude != null) {
+          lats.push(sensor.latitude)
+          lngs.push(sensor.longitude)
+        }
+      }
+      if (lats.length === 0) return
+      const avgLat = lats.reduce((a, b) => a + b, 0) / lats.length
+      const avgLng = lngs.reduce((a, b) => a + b, 0) / lngs.length
+      map.setView([avgLat, avgLng], map.getZoom())
+      autocentered = true
+      unwatchCenter()
+    }
+  )
+
   const resizeObserver = new ResizeObserver(() => {
     map.invalidateSize()
     mapTick.value++
@@ -306,6 +329,7 @@ onMounted(() => {
 
   onUnmounted(() => {
     resizeObserver.disconnect()
+    unwatchCenter()
     map.remove()
   })
 })
