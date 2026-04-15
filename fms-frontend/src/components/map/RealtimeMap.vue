@@ -282,7 +282,7 @@ onMounted(() => {
   const isDark = () => document.documentElement.classList.contains("dark")
 
   const map = L.map(mapEl.value!, {
-    center:           [37.5548, 127.0420],
+    center:           [37.5010, 127.0396],
     zoom:             14,
     zoomControl:      false,
     attributionControl: true,
