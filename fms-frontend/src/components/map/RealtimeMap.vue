@@ -278,7 +278,7 @@ function currentSensor(v: Vehicle): LatestSensor | null {
 // ── Leaflet 초기화 ───────────────────────────────────────────────
 onMounted(() => {
   const map = L.map(mapEl.value!, {
-    center:             [37.5172, 127.0473],  // 강남구청
+    center:             [35.8799, 128.6285],  // 동대구역
     zoom:               15,
     zoomControl:        false,
     attributionControl: true,
