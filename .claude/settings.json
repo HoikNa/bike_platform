@@ -40,7 +40,21 @@
       "Bash(curl -s -X POST https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/auth/login -H 'Content-Type: application/json' -H 'Origin: https://fms-frontend-peach.vercel.app' -d '{\"email\":\"admin@fms.com\",\"password\":\"admin1234\"}')",
       "Bash(curl -s -X POST https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/auth/login -H 'Content-Type: application/json' -H 'Origin: https://fms-frontend-peach.vercel.app' -d '{\"email\":\"admin@fms.io\",\"password\":\"admin123\"}')",
       "Bash(curl -s -o /dev/null -w \"HTTP Status: %{http_code}\\\\nResponse Time: %{time_total}s\\\\n\" https://gmbsw71bng.execute-api.ap-northeast-2.amazonaws.com/api/)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://fms-frontend-peach.vercel.app/app/dashboard)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://fms-frontend-peach.vercel.app/app/dashboard)",
+      "Bash(python3 -c ' *)",
+      "Bash(git commit -m ' *)",
+      "Bash(cat /home/hoik02/bikeplatform/.env*)",
+      "Bash(cat /home/hoik02/bikeplatform/fms-frontend/.env*)",
+      "WebFetch(domain:fms-frontend-peach.vercel.app)",
+      "Bash(gh api *)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:vercel.com)",
+      "Bash(curl -s https://fms-frontend-peach.vercel.app/)",
+      "Bash(curl -s https://fms-frontend-peach.vercel.app/assets/index-CpOuSAly.js)",
+      "Bash(curl -s \"https://fms-frontend-peach.vercel.app/assets/index-CpOuSAly.js\")",
+      "Bash(curl -s \"https://fms-frontend-peach.vercel.app/\")",
+      "Bash(curl -s \"https://fms-frontend-peach.vercel.app/assets/DashboardView-DBbwCns4.js\")",
+      "Bash(curl -s \"https://fms-frontend-peach.vercel.app/assets/fleet-BGncXOsE.js\")"
     ]
   }
 }
