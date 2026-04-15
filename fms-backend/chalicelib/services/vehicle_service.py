@@ -170,10 +170,11 @@ class VehicleService:
             VehicleStatus.RUNNING, VehicleStatus.IDLE, VehicleStatus.CHARGING,
             VehicleStatus.RUNNING, VehicleStatus.RUNNING, VehicleStatus.OFFLINE,
             VehicleStatus.RUNNING, VehicleStatus.ALERT,
+            VehicleStatus.RUNNING, VehicleStatus.IDLE,
         ]
 
         vehicles = []
-        for idx in range(1, 9):
+        for idx in range(1, 11):
             plate = f"{10 + idx}가{3000 + idx}"
             vehicle = Vehicle(
                 plate_number=plate,
