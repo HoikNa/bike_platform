@@ -258,10 +258,9 @@ const currentZoom = computed(() => {
   return mapInst.value?.getZoom() ?? 14
 })
 
-// Esri 위성 이미지 (API 키 불필요)
-const TILE_SATELLITE = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-const TILE_LABELS    = "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
-const TILE_ATTR      = 'Tiles &copy; <a href="https://www.esri.com/">Esri</a> &mdash; Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
+// CartoDB Voyager — 현대적 컬러 스트리트맵 (API 키 불필요)
+const TILE_URL  = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+const TILE_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 
 // ── 위치가 있는 차량만 표시 ──────────────────────────────────────
 const visibleVehicles = computed(() =>
@@ -287,16 +286,11 @@ onMounted(() => {
     maxZoom:            MAX_ZOOM,
   })
 
-  // 위성 베이스 레이어
-  L.tileLayer(TILE_SATELLITE, {
-    maxZoom:     MAX_ZOOM,
-    attribution: TILE_ATTR,
-  }).addTo(map)
-
-  // 도로·지명 라벨 오버레이
-  tileLayer.value = L.tileLayer(TILE_LABELS, {
-    maxZoom:   MAX_ZOOM,
-    opacity:   0.85,
+  // CartoDB Voyager 타일
+  tileLayer.value = L.tileLayer(TILE_URL, {
+    maxZoom:        MAX_ZOOM,
+    attribution:    TILE_ATTR,
+    subdomains:     "abcd",
   }).addTo(map)
 
   map.on("move zoom", () => { mapTick.value++ })
