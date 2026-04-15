@@ -258,11 +258,10 @@ const currentZoom = computed(() => {
   return mapInst.value?.getZoom() ?? 14
 })
 
-const TILE_LIGHT = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-const TILE_DARK  = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-const TILE_ATTR  =
-  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ' +
-  '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+// Esri 위성 이미지 (API 키 불필요)
+const TILE_SATELLITE = "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+const TILE_LABELS    = "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}"
+const TILE_ATTR      = 'Tiles &copy; <a href="https://www.esri.com/">Esri</a> &mdash; Source: Esri, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
 
 // ── 위치가 있는 차량만 표시 ──────────────────────────────────────
 const visibleVehicles = computed(() =>
@@ -279,21 +278,26 @@ function currentSensor(v: Vehicle): LatestSensor | null {
 
 // ── Leaflet 초기화 ───────────────────────────────────────────────
 onMounted(() => {
-  const isDark = () => document.documentElement.classList.contains("dark")
-
   const map = L.map(mapEl.value!, {
-    center:           [37.5548, 127.0420],
-    zoom:             14,
-    zoomControl:      false,
+    center:             [37.5172, 127.0473],  // 강남구청
+    zoom:               15,
+    zoomControl:        false,
     attributionControl: true,
-    minZoom:          MIN_ZOOM,
-    maxZoom:          MAX_ZOOM,
+    minZoom:            MIN_ZOOM,
+    maxZoom:            MAX_ZOOM,
   })
 
-  tileLayer.value = L.tileLayer(
-    isDark() ? TILE_DARK : TILE_LIGHT,
-    { maxZoom: MAX_ZOOM, attribution: TILE_ATTR, subdomains: "abcd" }
-  ).addTo(map)
+  // 위성 베이스 레이어
+  L.tileLayer(TILE_SATELLITE, {
+    maxZoom:     MAX_ZOOM,
+    attribution: TILE_ATTR,
+  }).addTo(map)
+
+  // 도로·지명 라벨 오버레이
+  tileLayer.value = L.tileLayer(TILE_LABELS, {
+    maxZoom:   MAX_ZOOM,
+    opacity:   0.85,
+  }).addTo(map)
 
   map.on("move zoom", () => { mapTick.value++ })
   map.whenReady(() => { mapReady.value = true; mapTick.value++ })
@@ -306,22 +310,8 @@ onMounted(() => {
   })
   resizeObserver.observe(mapEl.value!)
 
-  const darkObserver = new MutationObserver(() => {
-    if (!mapInst.value || !tileLayer.value) return
-    const dark = isDark()
-    mapInst.value.removeLayer(tileLayer.value as unknown as L.Layer)
-    tileLayer.value = L.tileLayer(
-      dark ? TILE_DARK : TILE_LIGHT,
-      { maxZoom: MAX_ZOOM, attribution: TILE_ATTR, subdomains: "abcd" }
-    ).addTo(mapInst.value as unknown as L.Map)
-  })
-  darkObserver.observe(document.documentElement, {
-    attributes: true, attributeFilter: ["class"],
-  })
-
   onUnmounted(() => {
     resizeObserver.disconnect()
-    darkObserver.disconnect()
     map.remove()
   })
 })

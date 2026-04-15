@@ -93,13 +93,7 @@
 
         <!-- 지도 -->
         <div class="flex-1 min-h-0 rounded-2xl overflow-hidden border border-secondary-200 dark:border-secondary-700 shadow-sm bg-secondary-100 dark:bg-secondary-800">
-          <RealtimeMap v-if="!fleetStore.isListLoading" :filter="mapFilter" />
-          <div v-else class="w-full h-full flex items-center justify-center text-secondary-400">
-            <div class="text-center">
-              <div class="w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-2" />
-              <p class="text-sm">지도 불러오는 중...</p>
-            </div>
-          </div>
+          <RealtimeMap :filter="mapFilter" />
         </div>
 
       </div>
